@@ -119,7 +119,7 @@ export class AppComponent {
 
 ##### Example of JSON
 
-```json
+```ts
 //Input
 {
   type: 'input',
@@ -140,7 +140,7 @@ export class AppComponent {
 
 ```
 
-```json
+```ts
 //Radio
 {
   type: 'radiobutton',
@@ -152,7 +152,7 @@ export class AppComponent {
 }
 ```
 
-```json
+```ts
 //Date
 {
   type: 'date',
@@ -167,7 +167,7 @@ export class AppComponent {
 }
 ```
 
-```json
+```ts
 //Select
 {
   type: 'select',
@@ -180,8 +180,8 @@ export class AppComponent {
 
 ```
 
-```json
-//Input
+```ts
+//Checkbox
 {
   type: 'checkbox',
   label: 'Accept Terms',
@@ -191,7 +191,7 @@ export class AppComponent {
 }
 ```
 
-```json
+```ts
 //Button
 {
   type: 'button',
