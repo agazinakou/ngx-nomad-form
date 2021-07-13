@@ -1,6 +1,6 @@
 # Nomad Form
 
-![Normad form](https://raw.githubusercontent.com/agazinakou/ngx-nomad-form/master/ngx-nomad-form.jpg)
+<img src="https://raw.githubusercontent.com/agazinakou/ngx-nomad-form/master/ngx-nomad-form.jpg " width="100" />
 
 Very simple form generator written with [Angular 12](https://angular.io/), for [Bootstrap 5](https://getbootstrap.com/).
 
