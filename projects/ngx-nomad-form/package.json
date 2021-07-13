@@ -1,5 +1,5 @@
 {
-  "name": "ngx-nomad-form",
+  "name": "@ngx-nomad-form",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.0.9",

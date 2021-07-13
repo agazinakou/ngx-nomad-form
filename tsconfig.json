@@ -20,9 +20,13 @@
       "dom"
     ],
     "paths": {
-      "ngx-nomad-form": [
-        "dist/ngx-nomad-form/ngx-nomad-form",
-        "dist/ngx-nomad-form"
+      "@ngx-nomad-form/*": [
+        "projects/ngx-nomad-form/src/lib/*",
+        "projects/ngx-nomad-form"
+      ],
+      "@ngx-nomad-form": [
+        "dist/@ngx-nomad-form/src/lib/*",
+        "dist/@ngx-nomad-form"
       ]
     }
   },
