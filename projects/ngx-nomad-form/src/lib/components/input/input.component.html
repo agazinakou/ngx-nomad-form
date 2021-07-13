@@ -1,0 +1,7 @@
+<div class="form-group mt-2" [formGroup]="group">
+  <label for="{{field.name}}">{{field.label}}</label>
+  <input [type]="field.inputType" class="form-control" formControlName="{{ field.name }}" [placeholder]="field.label" id="{{ field.name }}">
+  <ng-container *ngFor="let validation of field.validations;">
+    <small class="form-text text-danger" *ngIf="validate(field.name, validation.name)">{{validation.message}}</small>
+  </ng-container>
+</div>

@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ngx-nomad-form",
       "sourceRoot": "projects/ngx-nomad-form/src",
-      "prefix": "lib",
+      "prefix": "nf",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

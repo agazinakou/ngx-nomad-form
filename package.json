@@ -1,6 +1,9 @@
 {
   "name": "ngx-nomad-form",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": {
+    "name": "Lamine AZINAKOU"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
