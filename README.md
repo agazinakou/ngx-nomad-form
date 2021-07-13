@@ -37,7 +37,7 @@ Finally, you can use ngx-nomad-form in your Angular project. You have to import 
 
 The [`forRoot`](https://angular.io/api/router/RouterModule#forroot) static method is a convention that provides and configures services at the same time.
 Make sure you only call this method in the root module of your application, most of the time called `AppModule`.
-This method allows you to configure the `NgxNormadFormModule` by specifying a loader, a parser and/or a missing translations handler.
+This method allows you to configure the `NgxNormadFormModule`.
 
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
