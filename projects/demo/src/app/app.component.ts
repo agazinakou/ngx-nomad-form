@@ -87,6 +87,18 @@ export class AppComponent {
     label: 'Save'
   }];
 
+  get fieldInput() {
+    return JSON.stringify(this.fields, null, 2);
+  }
+
+  set fieldInput(v) {
+    try{
+    this.fields = JSON.parse(v);}
+    catch(e) {
+      console.log('error occored while you were typing the JSON');
+    };
+  }
+
   callBack(value: any){
     console.log(value);
   }

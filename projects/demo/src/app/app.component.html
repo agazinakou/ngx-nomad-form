@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 text-center mt-5">
-      <img src="https://i.pinimg.com/originals/7b/96/4a/7b964aafc67907ddc2f10ce26e271f99.jpg" width="100" alt="">
+      <img src="assets/ngx-nomad-form.jpg" width="100" alt="Nomad Form">
+    </div>
+    <div class="col-6">
+      <textarea class="form-control" rows="20" [(ngModel)]="fieldInput"></textarea>
     </div>
     <div class="col-6 pt-2">
       <nf-form [fields]="fields" (callBack)="callBack($event)"></nf-form>
