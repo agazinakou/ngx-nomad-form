@@ -1,9 +1,27 @@
 {
-  "name": "@ngx-nomad-form",
-  "version": "0.0.1",
+  "name": "ngx-nomad-form",
+  "version": "0.0.3",
+  "author": "Lamine AZINAKOU",
+  "description": "Very simple form generator written with Angular 12, for Bootstrap 5.",
+  "keywords": [
+    "angular",
+    "angular 12",
+    "forms",
+    "generator",
+    "form builder",
+    "ngx-nomad-form"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:agazinakou/ngx-nomad-form.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agazinakou/ngx-nomad-form/issues"
+  },
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9"
+    "@angular/common": "~12.1.1",
+    "@angular/core": "~12.1.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"

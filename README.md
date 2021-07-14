@@ -42,7 +42,7 @@ This method allows you to configure the `NgxNormadFormModule`.
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxNormadFormModule } from '@ngx-nomad-form/core';
+import { NgxNormadFormModule } from '@ngx-nomad-form';
 
 @NgModule({
     imports: [
@@ -77,7 +77,7 @@ export class SharedModule { }
 
 ```ts
 import { Component } from '@angular/core';
-import { FieldConfig } from '@ngx-nomad-form/interfaces/field-config';
+import { FieldConfig } from 'ngx-nomad-form';
 
 @Component({
     selector: 'app-root',
