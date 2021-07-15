@@ -24,7 +24,7 @@ Don't re-invent the wheel, Just re-align It
 First you need to install the npm module:
 
 ``` 
-$ npm install @ngx-nomad-form
+$ npm install ngx-nomad-form
 ```
 This will install all dependencies required for use the package.
 
