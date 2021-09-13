@@ -5,3 +5,4 @@ export * from './dynamic-form/dynamic-form.component';
 export * from './input/input.component';
 export * from './radio/radio.component';
 export * from './select/select.component';
+export * from './file/file.component';
