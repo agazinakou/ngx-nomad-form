@@ -14,6 +14,7 @@ import {
   DynamicFormComponent
 } from './components';
 import { DynamicFieldDirective } from './directives/dynamic-field/dynamic-field.directive';
+import { FileComponent } from './components/file/file.component';
 
 
 const formElements = [
@@ -23,6 +24,7 @@ const formElements = [
   DateComponent,
   RadioComponent,
   CheckBoxComponent,
+  FileComponent
 ];
 
 

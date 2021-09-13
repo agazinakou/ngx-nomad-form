@@ -1,6 +1,6 @@
 <div class="form-group mt-1" [formGroup]="group">
   <label for="{{ field.name }}">{{ field?.label }}</label>
   <select class="form-control" formControlName="{{ field.name }}" id="{{ field.name }}">
-    <option *ngFor="let item of field?.options" [value]="item">{{item}}</option>
+    <option *ngFor="let item of field?.options" [value]="item.value">{{item.label}}</option>
   </select>
 </div>

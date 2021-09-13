@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FieldConfig } from '@ngx-nomad-form/interfaces/field-config';
+import { FormConfig } from '@ngx-nomad-form/interfaces/form-config';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,15 @@ import { FieldConfig } from '@ngx-nomad-form/interfaces/field-config';
 export class AppComponent {
   title = 'demo';
 
+  formConfig: FormConfig = {
+    name: 'nomadFormDemo',
+    enctype: 'text/plain',
+  };
+
   fields: FieldConfig[] = [{
     type: 'input',
     label: 'Username',
+    placeholder: 'Your username',
     inputType: 'text',
     name: 'name',
     col: 6,
@@ -55,7 +62,13 @@ export class AppComponent {
     type: 'radiobutton',
     label: 'Gender',
     name: 'gender',
-    options: ['Male', 'Female'],
+    options: [{
+      label: 'Man',
+      value: 1
+    },{
+      label: 'Woman',
+      value: 2
+    }],
     value: 'Male',
     col: 6,
   }, {
@@ -72,9 +85,17 @@ export class AppComponent {
     type: 'select',
     label: 'Country',
     name: 'country',
-    value: 'Africa',
+    value: '1',
     col: 6,
-    options: ['America', 'Africa']
+    options: [
+      {
+        label: 'Côte d\'Ivoire',
+        value: 1
+      },{
+        label: 'Mali',
+        value: 2
+      }
+    ]
   }, {
     type: 'checkbox',
     label: 'Accept Terms',
@@ -84,7 +105,25 @@ export class AppComponent {
   }, {
     type: 'button',
     color: 'danger',
-    label: 'Save'
+    label: 'Save',
+    col: 12
+  }];
+
+  builderFormField: FieldConfig[] = [{
+    type: 'input',
+    label: 'Username',
+    inputType: 'text',
+    name: 'name',
+    col: 6,
+    validations: [{
+      name: 'required',
+      validator: Validators.required,
+      message: 'Name Required'
+    }, {
+      name: 'pattern',
+      validator: Validators.pattern('^[a-zA-Z]+$'),
+      message: 'Accept only text'
+    }]
   }];
 
   get fieldInput() {

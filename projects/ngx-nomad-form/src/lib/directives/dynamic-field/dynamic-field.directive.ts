@@ -1,5 +1,6 @@
 import { ComponentFactoryResolver,  Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { FileComponent } from '@ngx-nomad-form/components/file/file.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CheckBoxComponent } from '../../components/check-box/check-box.component';
 import { DateComponent } from '../../components/date/date.component';
@@ -14,7 +15,8 @@ const componentMapper: any = {
   select: SelectComponent,
   date: DateComponent,
   radiobutton: RadioComponent,
-  checkbox: CheckBoxComponent
+  checkbox: CheckBoxComponent,
+  file: FileComponent
 };
 
 @Directive({

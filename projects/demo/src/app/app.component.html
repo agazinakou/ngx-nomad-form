@@ -1,13 +1,19 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 text-center mt-5">
-      <img src="assets/ngx-nomad-form.jpg" width="100" alt="Nomad Form">
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4 mt-5">
+      <div class="card rounded">
+        <div class="card-body">
+          <img src="assets/ngx-nomad-form.jpg" width="80" alt="Nomad Form">
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-      <textarea class="form-control" rows="20" [(ngModel)]="fieldInput"></textarea>
+    <div class="col-8 pt-2">
+      <nf-form [fields]="fields" [formConfig]="formConfig" (callBack)="callBack($event)"></nf-form>
+      <div class="mt-3">
+        <label for="json">Output</label>
+        <textarea class="form-control" rows="10" [(ngModel)]="fieldInput"></textarea>
+      </div>
     </div>
-    <div class="col-6 pt-2">
-      <nf-form [fields]="fields" (callBack)="callBack($event)"></nf-form>
-    </div>
+
   </div>
 </div>

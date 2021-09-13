@@ -1,6 +1,6 @@
 {
   "name": "ngx-nomad-form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Lamine AZINAKOU",
   "description": "Very simple form generator written with Angular 12, for Bootstrap 5.",
   "keywords": [

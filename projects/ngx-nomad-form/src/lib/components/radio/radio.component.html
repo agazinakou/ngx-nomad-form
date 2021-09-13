@@ -1,9 +1,9 @@
 <div class="mt-2" [formGroup]="group">
   <label for="{{field.name}}">{{field.label}}</label>
   <div class="form-check" *ngFor="let item of field.options">
-    <input type="radio" class="form-check-input" formControlName="{{ field.name }}" [value]="item" id="{{ field.name }}">
+    <input type="radio" class="form-check-input" formControlName="{{ field.name }}" [value]="item.value" id="{{ field.name }}">
     <label class="form-check-label">
-      {{item}}
+      {{item.label}}
     </label>
   </div>
 </div>

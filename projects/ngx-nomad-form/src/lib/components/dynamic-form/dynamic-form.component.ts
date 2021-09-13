@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormConfig } from '@ngx-nomad-form/interfaces/form-config';
 import { FieldConfig } from '../../interfaces/field-config';
 
 @Component({
@@ -10,6 +11,7 @@ import { FieldConfig } from '../../interfaces/field-config';
 export class DynamicFormComponent implements OnInit {
 
   @Input() fields: FieldConfig[] = [];
+  @Input() formConfig: FormConfig = {};
   // eslint-disable-next-line @angular-eslint/no-output-native
   @Output() submit: EventEmitter<any> = new EventEmitter<any>();
   form!: FormGroup;

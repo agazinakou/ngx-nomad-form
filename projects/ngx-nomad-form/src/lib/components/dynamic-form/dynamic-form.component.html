@@ -1,4 +1,6 @@
-<form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
-  <ng-template *ngFor="let field of fields;" nf-dynamicField [field]="field" [group]="form">
-  </ng-template>
+<form class="dynamic-form row" [name]="formConfig.name" [enctype]="formConfig.enctype" [formGroup]="form" (submit)="onSubmit($event)">
+  <div *ngFor="let field of fields;" [class]="'col-md-' + field.col">
+    <ng-template nf-dynamicField [field]="field" [group]="form">
+    </ng-template>
+  </div>
 </form>

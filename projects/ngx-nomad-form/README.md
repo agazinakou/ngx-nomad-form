@@ -31,23 +31,23 @@ This will install all dependencies required for use the package.
 
 ## Usage
 
-#### 1. Import the `NgxNormadFormModule`:
+#### 1. Import the `NgxNomadFormModule`:
 
-Finally, you can use ngx-nomad-form in your Angular project. You have to import `NgxNormadFormModule.forRoot()` in the root NgModule of your application.
+Finally, you can use ngx-nomad-form in your Angular project. You have to import `NgxNomadFormModule.forRoot()` in the root NgModule of your application.
 
 The [`forRoot`](https://angular.io/api/router/RouterModule#forroot) static method is a convention that provides and configures services at the same time.
 Make sure you only call this method in the root module of your application, most of the time called `AppModule`.
-This method allows you to configure the `NgxNormadFormModule`.
+This method allows you to configure the `NgxNomadFormModule`.
 
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxNormadFormModule } from '@ngx-nomad-form';
+import { NgxNomadFormModule } from '@ngx-nomad-form';
 
 @NgModule({
     imports: [
         BrowserModule,
-        NgxNormadFormModule.forRoot()
+        NgxNomadFormModule.forRoot()
     ],
     bootstrap: [AppComponent]
 })
@@ -57,13 +57,13 @@ export class AppModule { }
 ##### SharedModule
 
 If you use a [`SharedModule`](https://angular.io/guide/sharing-ngmodules) that you import in multiple other feature modules,
-you can export the `NgxNormadFormModule` to make sure you don't have to import it in every module.
+you can export the `NgxNomadFormModule` to make sure you don't have to import it in every module.
 
 ```ts
 @NgModule({
     exports: [
         CommonModule,
-        NgxNormadFormModule
+        NgxNomadFormModule
     ]
 })
 export class SharedModule { }
@@ -146,7 +146,13 @@ export class AppComponent {
   type: 'radiobutton',
   label: 'Gender',
   name: 'gender',
-  options: ['Male', 'Female'],
+  options: [{
+      label: 'Man',
+      value: 1
+    },{
+      label: 'Woman',
+      value: 2
+  }],
   value: 'Male',
   col: 6,
 }
@@ -175,7 +181,15 @@ export class AppComponent {
   name: 'country',
   value: 'Africa',
   col: 6,
-  options: ['America', 'Africa']
+  options: [
+      {
+        label: 'Côte d\'Ivoire',
+        value: 1
+      },{
+        label: 'Mali',
+        value: 2
+      }
+  ]
 }
 
 ```
