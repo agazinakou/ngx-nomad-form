@@ -14,12 +14,15 @@ export class DynamicFormComponent implements OnInit {
   @Input() formConfig: FormConfig = {};
   // eslint-disable-next-line @angular-eslint/no-output-native
   @Output() submit: EventEmitter<any> = new EventEmitter<any>();
+  // eslint-disable-next-line @angular-eslint/no-output-on-prefix
+  @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
   form!: FormGroup;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.form = this.createControl();
+    this.detectChange();
   }
 
   get value() {return this.form?.value; }
@@ -66,6 +69,12 @@ export class DynamicFormComponent implements OnInit {
       control.markAsTouched({
         onlySelf: true
       });
+    });
+  }
+
+  detectChange(): void {
+    this.form.valueChanges.subscribe(val => {
+      this.onChange.emit(this.form.value);
     });
   }
 
