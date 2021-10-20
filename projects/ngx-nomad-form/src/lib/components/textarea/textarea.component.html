@@ -1,0 +1,20 @@
+<div class="form-group mt-2" [formGroup]="group">
+  <label for="{{field.name}}">{{field.label}}</label>
+  <textarea
+    class="form-control"
+    formControlName="{{ field.name }}"
+    name="{{field.name}}"
+    id="{{field.name}}"
+    rows="{{field.textareaRows}}"
+    cols="{{ field.textareaCols }}"
+    autocomplete="{{ field.autocomplete }}"
+    autofocus="{{ field.autofocus }}"
+    [readonly]="field.readonly"
+    [placeholder]="field.placeholder ?? ''"
+    >
+    {{ field.value }}
+  </textarea>
+  <ng-container *ngFor="let validation of field.validations;">
+    <small class="form-text text-danger" *ngIf="validate(field.name, validation.name)">{{validation.message}}</small>
+  </ng-container>
+</div>

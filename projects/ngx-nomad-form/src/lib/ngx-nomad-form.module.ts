@@ -15,6 +15,7 @@ import {
 } from './components';
 import { DynamicFieldDirective } from './directives/dynamic-field/dynamic-field.directive';
 import { FileComponent } from './components/file/file.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
 
 
 const formElements = [
@@ -24,7 +25,8 @@ const formElements = [
   DateComponent,
   RadioComponent,
   CheckBoxComponent,
-  FileComponent
+  FileComponent,
+  TextareaComponent
 ];
 
 
