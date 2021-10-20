@@ -101,7 +101,16 @@ export class AppComponent {
     label: 'Accept Terms',
     name: 'term',
     col: 6,
-    value: true
+    value: true,
+  },{
+    type: 'file',
+    label: 'Description',
+    name: 'description',
+    col: 12,
+    textareaCols: 10,
+    textareaRows: 5,
+    autocomplete: 'on',
+    readonly: true
   }, {
     type: 'button',
     color: 'danger',
@@ -139,6 +148,10 @@ export class AppComponent {
   }
 
   callBack(value: any){
+    console.log(value);
+  }
+
+  change(value: any){
     console.log(value);
   }
 }
