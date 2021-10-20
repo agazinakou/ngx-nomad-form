@@ -24,7 +24,7 @@ Don't re-invent the wheel, Just re-align It
 First you need to install the npm module:
 
 ``` 
-$ npm install ngx-nomad-form
+$ npm install @ngx-nomad-form
 ```
 This will install all dependencies required for use the package.
 
@@ -88,12 +88,19 @@ import { FieldConfig } from 'ngx-nomad-form';
 
 export class AppComponent {
     
+  //Form
+  formConfig: FormConfig = {
+    name: 'loginForm',
+    enctype: 'text/plain',
+  };
+
   //My fields
   fields: FieldConfig[] = [{
     type: 'input',
     label: 'Username',
     inputType: 'text',
     name: 'name',
+    readonly: false,
     validations: [{
       name: 'required',
       validator: Validators.required,
@@ -179,7 +186,7 @@ export class AppComponent {
   type: 'select',
   label: 'Country',
   name: 'country',
-  value: 'Africa',
+  value: 'Côte d\'Ivoire',
   col: 6,
   options: [
       {
@@ -206,12 +213,33 @@ export class AppComponent {
 ```
 
 ```ts
+//Textarea
+{
+  type: 'textarea',
+  label: 'Description',
+  name: 'description',
+  col: 12,
+  textareaCols: 10,
+  textareaRows: 5
+}
+```
+
+```ts
+//File
+{
+  type: 'file',
+  label: 'Upload picture',
+  name: 'picture',
+  col: 12
+}
+```
+
+```ts
 //Button
 {
   type: 'button',
   color: 'primary',
-  label: 'Save',
-  col: 12,
+  label: 'Save'
 }
 ```
 
