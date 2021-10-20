@@ -1,6 +1,7 @@
 <div class="form-group mt-1" [formGroup]="group">
   <label for="{{ field.name }}">{{ field?.label }}</label>
-  <select class="form-control" formControlName="{{ field.name }}" id="{{ field.name }}">
+  <select class="form-control" formControlName="{{ field.name }}" id="{{ field.name }}" autocomplete="{{ field.autocomplete }}"
+  autofocus="{{ field.autofocus }}">
     <option *ngFor="let item of field?.options" [value]="item.value">{{item.label}}</option>
   </select>
 </div>

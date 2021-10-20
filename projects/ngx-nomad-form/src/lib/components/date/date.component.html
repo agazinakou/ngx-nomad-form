@@ -1,6 +1,14 @@
 <div class="form-group" [formGroup]="group">
   <label for="{{field.name}}">{{field.label}}</label>
-  <input type="date" class="form-control" formControlName="{{ field.name }}" [placeholder]="field.placeholder ?? ''" id="{{ field.name }}">
+  <input
+    type="date"
+    class="form-control"
+    formControlName="{{ field.name }}"
+    [placeholder]="field.placeholder ?? ''"
+    id="{{ field.name }}"
+    autocomplete="{{ field.autocomplete }}"
+    autofocus="{{ field.autofocus }}"
+    [readonly]="field.readonly">
   <ng-container *ngFor="let validation of field.validations;">
     <small class="form-text text-danger" *ngIf="validate(field.name, validation.name)">{{validation.message}}</small>
   </ng-container>

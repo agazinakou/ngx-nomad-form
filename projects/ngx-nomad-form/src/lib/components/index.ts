@@ -6,3 +6,4 @@ export * from './input/input.component';
 export * from './radio/radio.component';
 export * from './select/select.component';
 export * from './file/file.component';
+export * from './textarea/textarea.component';

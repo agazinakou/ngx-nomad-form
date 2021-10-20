@@ -12,4 +12,9 @@ export interface FieldConfig {
   validations?: Validator[] | null;
   col?: number | null;
   color?: string | null;
+  textareaRows?: number | 3;
+  textareaCols?: number | 3;
+  autocomplete?: 'on'|'off';
+  autofocus?: 'on'|'off';
+  readonly?: boolean | false;
 }

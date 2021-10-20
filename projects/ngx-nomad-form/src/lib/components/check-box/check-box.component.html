@@ -1,6 +1,11 @@
 <div class="form-check mt-2" [formGroup]="group">
   <label class="form-check-label">
-    <input type="checkbox" class="form-check-input" formControlName="{{ field.name }}">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      formControlName="{{ field.name }}"
+      autofocus="{{ field.autofocus }}"
+      [readonly]="field.readonly">
     {{field.label}}
   </label>
 </div>

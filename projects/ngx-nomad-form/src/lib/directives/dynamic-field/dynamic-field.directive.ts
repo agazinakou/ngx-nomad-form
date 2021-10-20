@@ -1,6 +1,6 @@
+import { FileComponent } from './../../components/file/file.component';
 import { ComponentFactoryResolver,  Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FileComponent } from '@ngx-nomad-form/components/file/file.component';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CheckBoxComponent } from '../../components/check-box/check-box.component';
 import { DateComponent } from '../../components/date/date.component';
@@ -8,6 +8,7 @@ import { InputComponent } from '../../components/input/input.component';
 import { RadioComponent } from '../../components/radio/radio.component';
 import { SelectComponent } from '../../components/select/select.component';
 import { FieldConfig } from '../../interfaces/field-config';
+import { TextareaComponent } from '@ngx-nomad-form/components';
 
 const componentMapper: any = {
   input: InputComponent,
@@ -16,7 +17,8 @@ const componentMapper: any = {
   date: DateComponent,
   radiobutton: RadioComponent,
   checkbox: CheckBoxComponent,
-  file: FileComponent
+  file: FileComponent,
+  textarea: TextareaComponent
 };
 
 @Directive({
