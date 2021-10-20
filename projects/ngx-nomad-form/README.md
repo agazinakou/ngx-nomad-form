@@ -82,7 +82,7 @@ import { FieldConfig } from 'ngx-nomad-form';
 @Component({
     selector: 'app-root',
     template: `
-      <nf-form [fields]="fields" (callBack)="callBack($event)"></nf-form>
+      <nf-form [fields]="fields" [formConfig]="formConfig" (callBack)="callBack($event)" (onChange)="change($event)"></nf-form>
     `
 })
 
@@ -118,10 +118,17 @@ export class AppComponent {
 
   ...
 
+  // On Submit
   callBack(value: any){
     console.log(value);
   }
+
+  // Detect change
+  change(value: any){
+    console.log(value);
+  }
 }
+
 ```
 
 ##### Example of JSON
