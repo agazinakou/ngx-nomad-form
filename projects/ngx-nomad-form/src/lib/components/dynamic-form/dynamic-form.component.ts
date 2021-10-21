@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { FormConfig } from '@ngx-nomad-form/interfaces/form-config';
 import { FieldConfig } from '../../interfaces/field-config';
+import { FormConfig } from '../../interfaces/form-config';
 
 @Component({
   selector: 'nf-dynamic-form',
