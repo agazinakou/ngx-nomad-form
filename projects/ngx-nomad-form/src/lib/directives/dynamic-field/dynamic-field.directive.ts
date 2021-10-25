@@ -8,7 +8,7 @@ import { InputComponent } from '../../components/input/input.component';
 import { RadioComponent } from '../../components/radio/radio.component';
 import { SelectComponent } from '../../components/select/select.component';
 import { FieldConfig } from '../../interfaces/field-config';
-import { TextareaComponent } from '@ngx-nomad-form/components';
+import { TextareaComponent } from '../../components/textarea/textarea.component';
 
 const componentMapper: any = {
   input: InputComponent,
