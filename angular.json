@@ -163,5 +163,15 @@
       }
     }
   },
-  "defaultProject": "ngx-nomad-form"
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
+    }
+  },
+  "cli": {
+    "analytics": "add95389-583f-4c39-a803-e80548392024"
+  }
 }

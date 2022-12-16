@@ -1,6 +1,6 @@
 import { FieldConfig } from './../../interfaces/field-config';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'nf-textarea',
@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 export class TextareaComponent implements OnInit {
 
   field!: FieldConfig;
-  group!: FormGroup;
+  group!: UntypedFormGroup;
 
   constructor() { }
 

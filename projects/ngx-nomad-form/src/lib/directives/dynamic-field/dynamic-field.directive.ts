@@ -1,6 +1,6 @@
 import { FileComponent } from './../../components/file/file.component';
 import { ComponentFactoryResolver,  Directive, Input, OnInit, ViewContainerRef } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { ButtonComponent } from '../../components/button/button.component';
 import { CheckBoxComponent } from '../../components/check-box/check-box.component';
 import { DateComponent } from '../../components/date/date.component';
@@ -27,7 +27,7 @@ const componentMapper: any = {
 export class DynamicFieldDirective implements OnInit {
 
   @Input() field!: FieldConfig;
-  @Input() group!: FormGroup;
+  @Input() group!: UntypedFormGroup;
 
   componentRef: any;
 

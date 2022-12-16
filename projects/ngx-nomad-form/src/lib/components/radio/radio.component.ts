@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { FieldConfig } from '../../interfaces/field-config';
 
 @Component({
@@ -10,7 +10,7 @@ import { FieldConfig } from '../../interfaces/field-config';
 export class RadioComponent implements OnInit {
 
   field!: FieldConfig;
-  group!: FormGroup;
+  group!: UntypedFormGroup;
 
   constructor() { }
 

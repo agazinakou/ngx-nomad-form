@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators, FormControl } from '@angular/forms';
 import { FieldConfig } from '../../interfaces/field-config';
 import { FormConfig } from '../../interfaces/form-config';
 
@@ -16,9 +16,9 @@ export class DynamicFormComponent implements OnInit {
   @Output() submit: EventEmitter<any> = new EventEmitter<any>();
   // eslint-disable-next-line @angular-eslint/no-output-on-prefix
   @Output() onChange: EventEmitter<any> = new EventEmitter<any>();
-  form!: FormGroup;
+  form!: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: UntypedFormBuilder) { }
 
   ngOnInit() {
     this.form = this.createControl();
